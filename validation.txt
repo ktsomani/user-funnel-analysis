@@ -1,0 +1,1 @@
+PASS: unique cleaned IDs; one row per session; all ordered SQL paths match independent Python traversal; SQLite integrity.

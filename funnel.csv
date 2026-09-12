@@ -1,0 +1,6 @@
+stage,sessions,step_conversion_pct,dropoff_sessions,dropoff_pct
+visit,12000,100.0,0,0.0
+view_product,8641,72.01,3359,27.99
+add_to_cart,2824,32.68,5817,67.32
+checkout,1989,70.43,835,29.57
+purchase,1145,57.57,844,42.43
