@@ -60,5 +60,3 @@ Replace `generate()` with a CSV loader that returns the same session/event field
 
 ## Portfolio description
 “Built a reproducible e-commerce funnel analysis project using Python, SQLite, and an interactive dashboard. Implemented ordered session-level conversion logic, event deduplication, segmented analysis, and independent reconciliation checks on 12,000 simulated sessions. Developed testable recommendations and documented measurement limitations.”
-
-Do not claim this project increased a real store's conversion or revenue. Findings are generated in `results/findings.md` after each run.
