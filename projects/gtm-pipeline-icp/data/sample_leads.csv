@@ -1,0 +1,101 @@
+lead_id,created_date,channel,company_size,industry,persona,region,mql,sql,demo,trial,closed_won,sales_cycle_days,acv,lost_reason
+1,2025-12-06,Organic,1-10,Services,Founder,India,1,1,1,0,0,,,No response
+2,2025-08-31,Organic,51-200,FinTech,Founder,India,0,0,0,0,0,,,No response
+3,2025-01-21,Organic,11-50,SaaS,Head of Sales,Europe,1,1,1,1,1,41.0,5753.0,Won
+4,2025-07-29,Referral,51-200,SaaS,Founder,India,1,1,1,1,0,,,No budget
+5,2025-10-25,Sales Outbound,51-200,SaaS,RevOps,North America,1,1,1,1,0,,,No urgency
+6,2025-12-30,Referral,11-50,E-commerce,Head of Sales,SEA,0,0,0,0,0,,,No urgency
+7,2025-08-30,Paid Search,11-50,SaaS,Head of Sales,India,1,1,1,0,0,,,No urgency
+8,2025-10-31,Partner,11-50,Services,Head of Sales,SEA,0,0,0,0,0,,,Poor fit
+9,2025-02-13,Sales Outbound,1-10,E-commerce,Founder,India,1,1,1,0,0,,,No response
+10,2025-03-11,Sales Outbound,51-200,SaaS,Head of Sales,SEA,0,0,0,0,0,,,No budget
+11,2025-12-27,Sales Outbound,51-200,HealthTech,Head of Sales,SEA,0,0,0,0,0,,,No urgency
+12,2025-12-20,Organic,11-50,HealthTech,Finance,North America,1,1,0,0,0,,,No response
+13,2025-12-22,Organic,1-10,E-commerce,Founder,India,1,0,0,0,0,,,Poor fit
+14,2025-07-06,Paid Search,1-10,E-commerce,Head of Sales,India,1,1,1,1,0,,,No budget
+15,2025-05-24,Sales Outbound,11-50,FinTech,Product,India,1,1,1,0,0,,,Competitor
+16,2025-11-07,Sales Outbound,11-50,Services,Founder,India,0,0,0,0,0,,,No urgency
+17,2025-03-14,Referral,51-200,SaaS,Head of Sales,India,1,1,1,1,0,,,No urgency
+18,2025-03-01,Sales Outbound,51-200,SaaS,Head of Sales,Europe,1,0,0,0,0,,,No budget
+19,2025-09-18,Organic,11-50,Services,Head of Sales,Europe,1,1,1,0,0,,,No budget
+20,2025-04-09,Partner,1-10,SaaS,Founder,Europe,1,1,0,0,0,,,No response
+21,2025-03-15,Sales Outbound,1-10,E-commerce,Head of Sales,India,0,0,0,0,0,,,No response
+22,2025-12-20,Referral,51-200,SaaS,Head of Sales,North America,1,1,0,0,0,,,No urgency
+23,2025-12-02,Organic,51-200,SaaS,RevOps,India,0,0,0,0,0,,,No budget
+24,2025-07-11,Founder Outbound,11-50,SaaS,Head of Sales,Europe,1,1,1,1,1,41.0,6935.0,Won
+25,2025-03-27,Paid Search,1-10,E-commerce,RevOps,Europe,0,0,0,0,0,,,No response
+26,2025-04-26,Organic,11-50,SaaS,Head of Sales,India,0,0,0,0,0,,,No urgency
+27,2025-12-03,Paid Search,1-10,SaaS,Head of Sales,India,0,0,0,0,0,,,No response
+28,2025-08-21,Referral,11-50,SaaS,RevOps,India,1,1,0,0,0,,,No urgency
+29,2025-07-22,Sales Outbound,1-10,SaaS,Founder,India,0,0,0,0,0,,,No response
+30,2025-02-27,Organic,11-50,SaaS,RevOps,India,1,1,1,1,1,49.0,9015.0,Won
+31,2025-03-23,Paid Search,51-200,E-commerce,Founder,India,0,0,0,0,0,,,No urgency
+32,2025-09-07,Organic,51-200,SaaS,Product,India,1,0,0,0,0,,,No response
+33,2025-08-13,Referral,11-50,HealthTech,Head of Sales,India,0,0,0,0,0,,,No budget
+34,2025-10-11,Paid Search,1-10,Services,RevOps,India,0,0,0,0,0,,,Competitor
+35,2025-04-10,Sales Outbound,11-50,SaaS,Founder,India,1,1,1,1,0,,,No budget
+36,2025-04-15,Paid Search,11-50,FinTech,Product,India,1,1,0,0,0,,,No budget
+37,2025-05-12,Organic,201+,SaaS,Head of Sales,North America,1,1,1,1,0,,,No urgency
+38,2025-03-19,Organic,1-10,FinTech,Founder,India,1,1,1,0,0,,,No budget
+39,2025-05-26,Founder Outbound,11-50,FinTech,Head of Sales,India,1,0,0,0,0,,,No urgency
+40,2025-09-06,Organic,51-200,Services,Finance,India,1,0,0,0,0,,,No budget
+41,2025-03-17,Partner,11-50,E-commerce,Head of Sales,Europe,1,1,1,0,0,,,Poor fit
+42,2025-05-15,Referral,51-200,Services,RevOps,North America,1,1,1,1,0,,,No urgency
+43,2025-10-01,Sales Outbound,51-200,E-commerce,Founder,India,1,1,0,0,0,,,No budget
+44,2025-02-25,Organic,11-50,SaaS,Head of Sales,India,1,1,0,0,0,,,Competitor
+45,2025-09-10,Referral,11-50,SaaS,Product,Europe,1,0,0,0,0,,,No response
+46,2025-05-26,Sales Outbound,11-50,FinTech,Head of Sales,India,1,1,1,1,0,,,No urgency
+47,2025-02-15,Organic,1-10,SaaS,RevOps,India,1,1,1,1,0,,,No urgency
+48,2025-08-28,Organic,11-50,SaaS,Product,India,0,0,0,0,0,,,Poor fit
+49,2025-10-01,Referral,51-200,SaaS,Head of Sales,India,1,1,1,1,0,,,Competitor
+50,2025-08-23,Sales Outbound,1-10,SaaS,Head of Sales,India,0,0,0,0,0,,,No budget
+51,2025-02-08,Paid Search,11-50,SaaS,RevOps,India,0,0,0,0,0,,,No response
+52,2025-04-09,Paid Search,51-200,SaaS,Head of Sales,India,1,1,1,0,0,,,No budget
+53,2025-01-15,Organic,1-10,E-commerce,Finance,India,1,0,0,0,0,,,No response
+54,2025-01-03,Sales Outbound,11-50,SaaS,Product,India,0,0,0,0,0,,,No budget
+55,2025-01-31,Sales Outbound,11-50,SaaS,Head of Sales,SEA,1,1,0,0,0,,,No response
+56,2025-11-03,Paid Search,51-200,SaaS,Head of Sales,India,0,0,0,0,0,,,No urgency
+57,2025-04-08,Partner,11-50,FinTech,Founder,India,1,1,1,1,0,,,Competitor
+58,2025-11-26,Referral,11-50,Services,Product,India,1,0,0,0,0,,,No urgency
+59,2025-11-06,Paid Search,11-50,SaaS,RevOps,India,1,1,0,0,0,,,No urgency
+60,2025-04-27,Paid Search,11-50,HealthTech,Head of Sales,India,0,0,0,0,0,,,No budget
+61,2025-05-08,Organic,201+,Services,Head of Sales,Europe,1,1,1,1,0,,,No budget
+62,2025-12-19,Organic,1-10,SaaS,Founder,India,1,1,1,0,0,,,No urgency
+63,2025-04-26,Referral,51-200,FinTech,Head of Sales,India,1,1,1,1,0,,,No response
+64,2025-04-15,Organic,51-200,SaaS,Head of Sales,India,1,1,1,0,0,,,No budget
+65,2025-05-22,Organic,11-50,E-commerce,Founder,India,1,1,0,0,0,,,No urgency
+66,2025-01-27,Founder Outbound,11-50,SaaS,Founder,India,1,1,1,1,1,40.0,7170.0,Won
+67,2025-11-14,Paid Search,1-10,SaaS,Founder,India,1,1,1,0,0,,,No budget
+68,2025-01-24,Organic,1-10,FinTech,Head of Sales,India,1,1,1,0,0,,,No budget
+69,2025-08-18,Sales Outbound,1-10,FinTech,Founder,Europe,1,1,1,1,0,,,No budget
+70,2025-11-08,Founder Outbound,11-50,SaaS,Head of Sales,North America,1,1,1,1,0,,,Competitor
+71,2025-05-20,Referral,51-200,FinTech,Head of Sales,India,1,1,1,1,0,,,No urgency
+72,2025-01-22,Sales Outbound,11-50,SaaS,RevOps,India,0,0,0,0,0,,,No response
+73,2025-04-20,Paid Search,11-50,SaaS,Head of Sales,India,0,0,0,0,0,,,No urgency
+74,2025-01-02,Referral,1-10,Services,Head of Sales,India,0,0,0,0,0,,,No urgency
+75,2025-11-07,Organic,1-10,Services,Founder,India,0,0,0,0,0,,,No response
+76,2025-07-03,Organic,11-50,SaaS,RevOps,India,1,1,1,1,0,,,No budget
+77,2025-04-23,Paid Search,51-200,SaaS,Founder,India,1,1,1,0,0,,,No urgency
+78,2025-03-17,Organic,201+,E-commerce,Head of Sales,India,1,1,0,0,0,,,No response
+79,2025-10-02,Sales Outbound,11-50,SaaS,Head of Sales,North America,1,0,0,0,0,,,Poor fit
+80,2025-10-02,Organic,51-200,HealthTech,Head of Sales,India,1,1,1,1,1,43.0,14298.0,Won
+81,2025-09-05,Sales Outbound,51-200,SaaS,RevOps,India,1,1,0,0,0,,,Competitor
+82,2025-09-26,Organic,11-50,E-commerce,Head of Sales,North America,1,0,0,0,0,,,No urgency
+83,2025-03-23,Sales Outbound,1-10,FinTech,Head of Sales,India,1,1,0,0,0,,,No budget
+84,2025-08-28,Referral,11-50,SaaS,Founder,India,1,1,1,0,0,,,Poor fit
+85,2025-10-17,Organic,11-50,SaaS,Finance,India,1,0,0,0,0,,,No urgency
+86,2025-05-01,Sales Outbound,11-50,SaaS,RevOps,India,1,1,1,1,0,,,No response
+87,2025-05-26,Sales Outbound,11-50,Services,Head of Sales,India,1,1,0,0,0,,,No response
+88,2025-03-02,Paid Search,11-50,HealthTech,Head of Sales,India,0,0,0,0,0,,,No budget
+89,2025-10-10,Referral,11-50,SaaS,Head of Sales,North America,1,1,1,0,0,,,No urgency
+90,2025-09-23,Partner,11-50,E-commerce,Head of Sales,India,1,1,1,1,0,,,No urgency
+91,2025-06-07,Sales Outbound,1-10,Services,Founder,India,0,0,0,0,0,,,No response
+92,2025-02-18,Organic,11-50,SaaS,Head of Sales,India,1,1,1,1,0,,,Competitor
+93,2025-01-23,Paid Search,1-10,FinTech,RevOps,India,0,0,0,0,0,,,No response
+94,2025-09-04,Partner,11-50,Services,Founder,India,1,1,1,1,1,33.0,7575.0,Won
+95,2025-09-25,Paid Search,51-200,E-commerce,Head of Sales,India,1,1,1,0,0,,,No budget
+96,2025-03-17,Founder Outbound,51-200,SaaS,Head of Sales,India,1,1,1,1,0,,,No urgency
+97,2025-09-25,Paid Search,11-50,SaaS,Head of Sales,India,0,0,0,0,0,,,No response
+98,2025-03-24,Organic,11-50,SaaS,Founder,Europe,1,1,1,1,0,,,No budget
+99,2025-05-19,Partner,11-50,Services,Head of Sales,Europe,1,1,1,0,0,,,No urgency
+100,2025-04-18,Founder Outbound,11-50,Services,Founder,India,1,1,1,1,0,,,Competitor

@@ -1,0 +1,21 @@
+{
+  "leads": 8000,
+  "wins": 343,
+  "overall_win_rate": 0.0429,
+  "avg_acv": 13010.79,
+  "avg_sales_cycle_days": 43.5,
+  "closed_won_value": 4462701.0,
+  "best_channel": {
+    "name": "Founder Outbound",
+    "win_rate": 0.0781,
+    "avg_acv": 12906.26,
+    "avg_cycle": 40.1
+  },
+  "best_icp": {
+    "company_size": "201+",
+    "industry": "Services",
+    "win_rate": 0.0794,
+    "avg_acv": 30881.87,
+    "avg_cycle": 47.3
+  }
+}

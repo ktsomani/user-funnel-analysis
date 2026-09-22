@@ -1,0 +1,67 @@
+\documentclass[9.8pt,a4paper]{article}
+\usepackage[margin=0.52in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.0pt,topsep=1.4pt,parsep=0pt,partopsep=0pt}
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4.5pt}{2.5pt}
+\newcommand{\role}[2]{\textbf{#1}\hfill #2\\}
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Kartik Somani}\\[1pt]
+{\small Data Analyst | Product Analyst | GTM Analytics}\\[2pt]
+Jaipur, Rajasthan \;|\; +91 6377937036 \;|\; \href{mailto:kartik.somani500@gmail.com}{kartik.somani500@gmail.com}\\[-1pt]
+\href{https://linkedin.com/in/kartik-somani-79ba64372}{linkedin.com/in/kartik-somani-79ba64372} \;|\; \href{https://github.com/ktsomani}{github.com/ktsomani}
+\end{center}
+\vspace{-7pt}
+
+\section{Professional Summary}
+Early-career analyst with hands-on experience using SQL, Python, Power BI, Snowflake, and dbt to clean data, define metrics, analyze funnels and cohorts, and turn findings into product and GTM recommendations. Strong foundation in data quality, KPI design, segmentation, retention/churn analysis, dashboarding, and experiment framing.
+
+\section{Technical Skills}
+\textbf{Analytics \& BI:} SQL, Python, Pandas, Power BI, DAX, Power Query, Excel, Funnel Analysis, Cohort Analysis, KPI Design \\
+\textbf{Data \& Modeling:} Snowflake, dbt, PostgreSQL, ETL/ELT, Star Schema, Fact/Dimension Modeling, Data Validation \\
+\textbf{Product \& GTM:} Activation, Retention, Churn, Segmentation, ICP Analysis, Conversion Funnels, Experiment Design, Customer Journey \\
+\textbf{Tools:} Git, GitHub, Streamlit, REST APIs, JSON, CSV, Postman
+
+\section{Experience}
+\role{Jaipur Metro Rail Corporation Ltd. - Summer Intern}{Jun 2023 -- Aug 2023}
+\begin{itemize}
+  \item Developed Python workflows to clean, transform, and analyze operational datasets for recurring engineering reporting and trend analysis.
+  \item Performed data-quality checks, reconciled outputs, debugged processing issues, and communicated structured findings to engineering stakeholders.
+\end{itemize}
+
+\section{Selected Projects}
+\role{SaaS Growth \& Retention Intelligence | Python, SQL, Cohort Analytics}{2026}
+\begin{itemize}
+  \item Built a synthetic B2B SaaS analytics model across 3,500 accounts covering activation, trial-to-paid conversion, churn, MRR, feature adoption, and cohort retention.
+  \item Segmented churn by plan, company size, industry, and acquisition channel; identified Paid Search as the highest-churn simulated channel (43.5\%) and framed onboarding/ICP experiments with explicit limitations.
+  \item \href{https://github.com/ktsomani/user-funnel-analysis/tree/main/projects/saas-growth-retention}{GitHub: project source and dashboard}
+\end{itemize}
+
+\role{B2B SaaS GTM Pipeline \& ICP Analytics | Python, SQL}{2026}
+\begin{itemize}
+  \item Analyzed a synthetic 8,000-lead CRM funnel from Lead to MQL, SQL, Demo, Trial, and Closed Won; calculated win rate, ACV, sales-cycle length, and channel quality.
+  \item Built ICP scoring across company size and industry; surfaced Founder Outbound as the strongest simulated channel hypothesis and linked recommendations to measurable conversion tests.
+  \item \href{https://github.com/ktsomani/user-funnel-analysis/tree/main/projects/gtm-pipeline-icp}{GitHub: project source and dashboard}
+\end{itemize}
+
+\role{E-commerce User Funnel Analysis | Python, SQLite, SQL}{2026}
+\begin{itemize}
+  \item Built a reproducible five-stage session funnel on 12,000 simulated sessions; implemented deduplication, ordered-event logic, segment analysis, and an interactive dashboard.
+  \item Identified a 67.3\% simulated drop-off at add-to-cart and validated SQL outputs against an independent Python traversal before framing testable product recommendations.
+\end{itemize}
+
+\section{Education}
+\textbf{Swami Keshvanand Institute of Technology (SKIT), Jaipur} \hfill 2020 -- 2024\\
+B.Tech. in Electronics \& Communication Engineering
+
+\end{document}

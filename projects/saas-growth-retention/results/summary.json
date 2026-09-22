@@ -1,0 +1,19 @@
+{
+  "accounts": 3500,
+  "activation_rate": 0.6571,
+  "trial_to_paid_rate": 0.5165,
+  "paid_accounts": 1188,
+  "paid_churn_rate": 0.3005,
+  "monthly_recurring_revenue": 146351.7,
+  "arpu": 123.19,
+  "best_low_churn_channel": "Partner",
+  "best_low_churn_channel_rate": 0.2119,
+  "highest_churn_channel": "Paid Search",
+  "highest_churn_channel_rate": 0.4346,
+  "best_segment": {
+    "company_size": "51-200",
+    "channel": "Referral",
+    "churn_rate": 0.1224,
+    "avg_mrr": 117.33
+  }
+}
