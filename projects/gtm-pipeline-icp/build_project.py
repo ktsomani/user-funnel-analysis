@@ -10,12 +10,13 @@ for d in ["data","results"]:
 
 rng=np.random.default_rng(84)
 n=8000
+lead_ids=np.arange(1,n+1)
+created=pd.to_datetime("2025-01-01")+pd.to_timedelta(rng.integers(0,365,n),unit="D")
 channels=rng.choice(["Founder Outbound","Sales Outbound","Organic","Paid Search","Referral","Partner"],n,p=[.10,.22,.22,.20,.16,.10])
 sizes=rng.choice(["1-10","11-50","51-200","201+"],n,p=[.28,.36,.25,.11])
 industries=rng.choice(["SaaS","E-commerce","FinTech","Services","HealthTech"],n,p=[.31,.21,.18,.18,.12])
 personas=rng.choice(["Founder","Head of Sales","RevOps","Product","Finance"],n,p=[.22,.28,.24,.15,.11])
 regions=rng.choice(["India","SEA","Europe","North America"],n,p=[.40,.17,.22,.21])
-created=pd.to_datetime("2025-01-01")+pd.to_timedelta(rng.integers(0,365,n),unit="D")
 
 mql_base={"Founder Outbound":.56,"Sales Outbound":.43,"Organic":.50,"Paid Search":.37,"Referral":.62,"Partner":.57}
 size_bonus={"1-10":-.06,"11-50":0,"51-200":.08,"201+":.05}
@@ -26,7 +27,13 @@ trial=demo & (rng.random(n)<np.array([.64 if s in ["51-200","201+"] else .55 for
 
 pwin=[]
 for c,s,i in zip(channels,sizes,industries):
-    p=.28 + (.12 if c=="Founder Outbound" else 0)+(.10 if c=="Referral" else 0)-(.05 if c=="Paid Search" else 0)+(.08 if s=="51-200" else 0)+(.05 if s=="201+" else 0)+(.04 if i=="SaaS" else 0)
+    p=.28
+    if c=="Founder Outbound": p+=.12
+    if c=="Referral": p+=.10
+    if c=="Paid Search": p-=.05
+    if s=="51-200": p+=.08
+    if s=="201+": p+=.05
+    if i=="SaaS": p+=.04
     pwin.append(p)
 won=trial & (rng.random(n)<np.clip(pwin,.08,.70))
 
@@ -34,12 +41,13 @@ cycle_base={"Founder Outbound":39,"Sales Outbound":52,"Organic":47,"Paid Search"
 cycle=np.array([max(12,int(rng.normal(cycle_base[c],8))) if w else np.nan for c,w in zip(channels,won)])
 acv_base={"1-10":3200,"11-50":7200,"51-200":16000,"201+":32000}
 acv=np.array([round(max(1200,rng.normal(acv_base[s],acv_base[s]*.18)),0) if w else 0 for s,w in zip(sizes,won)])
+lost_reason=np.where(won,"Won",rng.choice(["No budget","No urgency","Competitor","Poor fit","No response"],n,p=[.25,.22,.18,.15,.20]))
 
 df=pd.DataFrame({
-    "lead_id":np.arange(1,n+1),"created_date":created.date,"channel":channels,"company_size":sizes,
+    "lead_id":lead_ids,"created_date":created.date,"channel":channels,"company_size":sizes,
     "industry":industries,"persona":personas,"region":regions,"mql":mql.astype(int),"sql":sql.astype(int),
     "demo":demo.astype(int),"trial":trial.astype(int),"closed_won":won.astype(int),
-    "sales_cycle_days":cycle,"acv":acv
+    "sales_cycle_days":cycle,"acv":acv,"lost_reason":lost_reason
 })
 df.to_csv(ROOT/"data"/"leads.csv",index=False)
 
