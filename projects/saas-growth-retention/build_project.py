@@ -10,40 +10,50 @@ for d in ["data","results"]:
 
 rng = np.random.default_rng(42)
 n = 3500
+account_ids = np.arange(1, n+1)
+signup_dates = pd.to_datetime("2025-01-01") + pd.to_timedelta(rng.integers(0,365,n), unit="D")
 plans = rng.choice(["Starter","Growth","Pro"], n, p=[.50,.34,.16])
 sizes = rng.choice(["1-10","11-50","51-200","201+"], n, p=[.36,.34,.22,.08])
 industries = rng.choice(["SaaS","E-commerce","FinTech","Services","HealthTech"], n, p=[.30,.22,.18,.18,.12])
 channels = rng.choice(["Organic","Outbound","Paid Search","Referral","Partner"], n, p=[.26,.22,.24,.18,.10])
 regions = rng.choice(["India","SEA","Europe","North America"], n, p=[.45,.18,.19,.18])
-signup = pd.to_datetime("2025-01-01")+pd.to_timedelta(rng.integers(0,365,n),unit="D")
 
 act_base={"Starter":.60,"Growth":.69,"Pro":.76}
 size_bonus={"1-10":-.05,"11-50":.01,"51-200":.05,"201+":.07}
 channel_bonus={"Organic":.04,"Outbound":.02,"Paid Search":-.04,"Referral":.06,"Partner":.05}
 p_act=np.clip([act_base[p]+size_bonus[s]+channel_bonus[c] for p,s,c in zip(plans,sizes,channels)],.35,.90)
 activated=rng.random(n)<p_act
+activation_days=np.where(activated,rng.integers(0,15,n),np.nan)
+activation_date=pd.Series(signup_dates)+pd.to_timedelta(pd.Series(activation_days),unit="D")
 
 paid_base={"Starter":.42,"Growth":.58,"Pro":.71}
 p_paid=np.clip([paid_base[p]+(.05 if c=="Referral" else 0)+(.03 if c=="Outbound" else 0)-(.05 if c=="Paid Search" else 0) for p,c in zip(plans,channels)],.2,.9)
 paid=activated & (rng.random(n)<p_paid)
+paid_date=pd.Series(signup_dates)+pd.to_timedelta(rng.integers(7,31,n),unit="D")
+paid_date=paid_date.where(paid)
 
 churn_base={"Starter":.42,"Growth":.27,"Pro":.18}
 size_churn={"1-10":.08,"11-50":.02,"51-200":-.04,"201+":-.07}
 channel_churn={"Organic":-.04,"Outbound":-.02,"Paid Search":.07,"Referral":-.05,"Partner":-.04}
 p_churn=np.clip([churn_base[p]+size_churn[s]+channel_churn[c] for p,s,c in zip(plans,sizes,channels)],.05,.70)
 churned=paid & (rng.random(n)<p_churn)
+churn_days=rng.integers(30,240,n)
+churn_date=paid_date+pd.to_timedelta(churn_days,unit="D")
+churn_date=churn_date.where(churned)
 
-paid_date = signup + pd.to_timedelta(rng.integers(7,31,n),unit="D")
-churn_date = paid_date + pd.to_timedelta(rng.integers(30,240,n),unit="D")
-feature=np.clip(rng.beta(2.2,2.0,n)+np.where(paid & ~churned,.10,0)-np.where(churned,.06,0),0,1)
+feature=np.where(activated,rng.beta(2.2,2.0,n),rng.beta(.7,4.2,n))
+feature=np.clip(feature+np.where(paid & ~churned,.10,0)-np.where(churned,.06,0),0,1)
 mrr_base={"Starter":39,"Growth":99,"Pro":249}
-mrr=np.array([mrr_base[p] for p in plans],float)*np.where(sizes=="201+",1.5,np.where(sizes=="51-200",1.2,1.0))*paid
+mrr=np.array([mrr_base[p] for p in plans],float)
+mrr*=np.where(sizes=="201+",1.5,np.where(sizes=="51-200",1.2,1.0))
+mrr*=np.where(paid,1,0)
 
 df=pd.DataFrame({
-    "account_id":np.arange(1,n+1),"signup_date":signup.date,"plan":plans,"company_size":sizes,
+    "account_id":account_ids,"signup_date":signup_dates.date,"plan":plans,"company_size":sizes,
     "industry":industries,"acquisition_channel":channels,"region":regions,
-    "activated":activated.astype(int),"paid":paid.astype(int),"churned":churned.astype(int),
-    "paid_date":paid_date.date,"churn_date":pd.Series(churn_date.date).where(churned),
+    "activated":activated.astype(int),"activation_date":activation_date.dt.date,
+    "paid":paid.astype(int),"paid_date":paid_date.dt.date,
+    "churned":churned.astype(int),"churn_date":churn_date.dt.date,
     "feature_adoption_score":np.round(feature,3),"mrr":np.round(mrr,2)
 })
 df.to_csv(ROOT/"data"/"accounts.csv",index=False)
